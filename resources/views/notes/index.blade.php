@@ -6,17 +6,22 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Notes <br />
-                    <a href='/notes/{{$entity}}/{{$entityID}}/create'>Add Note for {{ $entity }} {{ $entityName }} ID: {{ $entityID }}</a>
+                    Notes<br />
+                    <a href='/notes/{{$entity}}/{{$entityID}}/create'>Add New Note</a>
                 </div> 
 
                 <div class="card-body">
-                    <table class="table" border='1'>
-                        <!--<tr>
-                            <td>Note</td>
+                    <h3>Notes for {{ $entity }} {{ $entityName }} ID: {{ $entityID }}</h3>
+                    <table class="table table-striped table-dark table-hover">
+                    <thread>
+                        <tr>
+                            <th>Img</th>
+                            <th>Note</th>
                             <td></td>
                             <td></td>
-                        </tr>-->
+                            <td></td>
+                        </tr>
+                    </thread>
                         @foreach($notes as $note)
                             <tr>
                                 <td>

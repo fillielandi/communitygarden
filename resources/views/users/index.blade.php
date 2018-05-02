@@ -11,13 +11,16 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table" border='1'>
-                        <tr>
-                            <td>Name</td>
-                            <td>email</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <h3>Registered Users of {{ app('system')->name }}</h3>
+                    <table class="table table-striped table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">System #</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         @foreach($users as $user)
                             <tr>
                                 <td>
@@ -33,6 +36,7 @@
                                 
                             </tr>
                         @endforeach
+                        </tbody>
                     </table>
                 </div>
             </div>

@@ -5,18 +5,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
-                    Rooms <br />
-                    <a href='/rooms/create'>Add Room</a>
+                <div class="card-header">Rooms<br />
+                <a href='/rooms/create'>Add Room</a>
                 </div>
 
                 <div class="card-body">
-                    <table class="table" border='1'>
-                        <tr>
-                            <td>Name</td>
-                            <td>Comments</td>
-                            <td></td>
-                        </tr>
+                    <h3>Rooms of {{ app('system')->name }}</h3>
+                    <table class="table table-striped table-dark table-hover">
+                        <thread>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Comments</th>
+                                <td></td>
+                            </tr>
+                        </thread>
                         @foreach($rooms as $room)
                             <tr>
                                 <td>{{ $room['name'] }}</td>

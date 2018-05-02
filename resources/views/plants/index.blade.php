@@ -11,21 +11,24 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table" border='1'>
+                <h3>Plants of {{ app('system')->name }}</h3>
+                    <table class="table table-striped table-dark table-hover">
+                    <thread>
                         <tr>
-                            <td></td>
-                            <td>Name</td>
-                            <td>Comments</td>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Comments</th>
                             <td></td>
                             <td></td>
                         </tr>
+                    </thread>
                         @foreach($plants as $plant)
                             <tr>
                                 <td><img src='{{$plant['imageFileName'] }}' style="width: 50px;  height: 50px" class="rounded imgPopup"/></td>
                                 <td>{{ $plant['name'] }}</td>
                                 <td>{{ $plant['comments'] }}</td>
-                                <td><a href='/plants/edit/{{$plant['id']}}'>Edit</a></td>
                                 <td><a href='/notes/plant/{{$plant['id']}}'>Notes</a></td>
+                                <td><a href='/plants/edit/{{$plant['id']}}'>Edit</a></td>
                             </tr>
                         @endforeach
                     </table>

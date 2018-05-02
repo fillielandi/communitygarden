@@ -11,12 +11,15 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table" border='1'>
+                    <h3>Plant Types of {{ app('system')->name }}</h3>
+                    <table class="table table-striped table-dark table-hover">
+                    <thread>
                         <tr>
-                            <td>Name</td>
-                            <td>Comments</td>
+                            <th scope="col">Name</th>
+                            <th scope="col">Comments</th>
                             <td></td>
                         </tr>
+                    </thread>
                         @foreach($planttypes as $planttype)
                             <tr>
                                 <td>{{ $planttype['name'] }}</td>
