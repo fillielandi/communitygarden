@@ -52,9 +52,9 @@
                             <li class ="nav-link"><a href="/users">{{ __('Users') }}</a></li>
                             <li class ="nav-link"><a href="/rooms">{{ __('Rooms') }}</a></li>
                             <li class ="nav-link"><a href="/planttypes">{{ __('Plant Types') }}</a></li>
+                            <li class="nav-link"><a href="/soils">{{ __('Soil') }}</a></li>
+                            <li class="nav-link"><a href="/planters">{{ __('Planter') }}</a></li>
                             <li class ="nav-link"><a href="/plants">{{ __('Plants') }}</a></li>
-                            <li class="nav-link"><a href="/soil">{{ __('Soil') }}</a></li>
-                            <li class="nav-link"><a href="/planter">{{ __('Planter') }}</a></li>
                             <li class="nav-link"><a href="/community">{{ __('Community') }}</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

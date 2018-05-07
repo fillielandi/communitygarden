@@ -16,7 +16,7 @@
                         <input value='{{ $plant->id }}' type="hidden" id="id" name="id"> 					    
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} row">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <label for="name" class="col-md-4 control-label text-md-right">Name</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value='{{ $plant->name }}' required autofocus>
@@ -37,7 +37,7 @@
                                         <option value="">Select Room</option>
                                         @foreach($rooms as $room)
                                             @if($room->id == $plant->roomID)
-                                            <option value="{{$room->id}}">{{$room->name}}</option>
+                                                <option value="{{$room->id}}">{{$room->name}}</option>
                                                 <option value="{{$room->id}}" selected>{{$room->name}}</option>
                                             @else
                                                 <option value="{{$room->id}}">{{$room->name}}</option>
@@ -66,11 +66,47 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="soiltype" class="col-md-4 col-form-label text-md-right">{{ __('Soil Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="soiltype" id="planttype">
+                                        <option value="">Select Soil Type</option>
+                                        @foreach($soils as $soil)
+                                            @if($soil->id == $plant->soilID)
+                                            <option value="{{$soil->id}}">{{$soil->name}}</option>
+                                                <option value="{{$soil->id}}" selected>{{$soil->name}}</option>
+                                            @else
+                                                <option value="{{$soil->id}}">{{$soil->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
+                            <div class="form-group row">
+                            <label for="plantertype" class="col-md-4 col-form-label text-md-right">{{ __('Soil Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="plantertype" id="plantertype">
+                                        <option value="">Select Planter Type</option>
+                                        @foreach($planters as $planter)
+                                            @if($planter->id == $plant->planterID)
+                                            <option value="{{$planter->id}}">{{$planter->name}}</option>
+                                                <option value="{{$planter->id}}" selected>{{$planter->name}}</option>
+                                            @else
+                                                <option value="{{$planter->id}}">{{$planter->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="comments" class="col-md-4 col-form-label text-md-right">{{ __('Comments') }}</label>
 
                             <div class="col-md-6">
                                 {{-- <input id="comment" type="text" class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" name="comment" value="{{ old('comment') }}"> --}}
-                                <textarea id='noteTextarea' name="comments" rows='4' cols='55' maxlength='1056'>{{ $plant->comments }}</textarea>
+                                <textarea id='noteTextarea' name="comments" rows='4' cols='50' maxlength='1056'>{{ $plant->comments }}</textarea>
                                 @if ($errors->has('comments'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('comments') }}</strong>

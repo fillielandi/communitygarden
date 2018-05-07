@@ -18,6 +18,7 @@
                             <th scope="col">Image</th>
                             <th scope="col">Name</th>
                             <th scope="col">Comments</th>
+                            <th scope="col">Room</th>
                             <td></td>
                             <td></td>
                         </tr>
@@ -27,6 +28,7 @@
                                 <td><img src='{{$plant['imageFileName'] }}' style="width: 50px;  height: 50px" class="rounded imgPopup"/></td>
                                 <td>{{ $plant['name'] }}</td>
                                 <td>{{ $plant['comments'] }}</td>
+                                <td>{{ $plant['room'] }}</td>
                                 <td><a href='/notes/plant/{{$plant['id']}}'>Notes</a></td>
                                 <td><a href='/plants/edit/{{$plant['id']}}'>Edit</a></td>
                             </tr>
