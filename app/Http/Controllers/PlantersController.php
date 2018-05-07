@@ -57,7 +57,7 @@ class PlantersController extends Controller
             
             $planter->updated_at = Carbon::now()->toDateTimeString();
             $planter->save();
-            return redirect('planter');
+            return redirect('planters');
     }
 
     /**

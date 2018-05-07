@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     Planter Types <br />
-                    <a href='/soils/create'>Add Planter</a>
+                    <a href='/planters/create'>Add Planter</a>
                 </div>
 
                 <div class="card-body">
